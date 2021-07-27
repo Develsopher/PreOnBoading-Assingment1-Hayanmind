@@ -1,13 +1,11 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Comment from './Comment';
 
 function CommentList({ page }) {
-  const [isLoading, setIsLoading] = useState(true);
   const [comments, setComments] = useState([]);
 
   const loadComments = async page => {
-    setIsLoading(true);
     try {
       const { data: loadedComments } = await axios.get(
         `https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=10`
@@ -18,8 +16,6 @@ function CommentList({ page }) {
 
         return newComments;
       });
-
-      setIsLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -40,12 +36,7 @@ function CommentList({ page }) {
     loadComments(page);
   }, [page]);
 
-  return (
-    <ul className="comment-list">
-      {renderComments()}
-      {/* {isLoading ? <div>Loading...</div> : ''} */}
-    </ul>
-  );
+  return <ul className="comment-list">{renderComments()}</ul>;
 }
 
 export default CommentList;

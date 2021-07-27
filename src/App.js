@@ -1,10 +1,9 @@
+import { useState, useEffect } from 'react';
 import CommentList from './components/CommentList';
 import './App.css';
-import { useState, useEffect } from 'react';
 
 function App() {
   const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
 
   const onScroll = () => {
     const totalHeight = document.documentElement.scrollHeight;
@@ -14,7 +13,6 @@ function App() {
       setPage(page => page + 1);
     }
   };
-  console.log(page);
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll, { passive: true });

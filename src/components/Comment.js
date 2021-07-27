@@ -1,18 +1,20 @@
+import './Comment.css';
+
 function Comment(props) {
   const { id, email, body } = props;
 
   return (
     <li className="comment">
       <h1>
-        <span>Comment Id</span>
+        <span className="title">Comment Id</span>
         <span>{id}</span>
       </h1>
       <div className="email">
-        <span>Email</span>
+        <span className="title">Email</span>
         <span>{email}</span>
       </div>
       <div className="content">
-        <span>Comment</span>
+        <span className="title">Comment</span>
         <span>{body}</span>
       </div>
     </li>
