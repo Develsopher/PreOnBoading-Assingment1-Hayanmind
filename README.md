@@ -17,7 +17,7 @@ scroll event를 사용한 Infinite Scroll 구현
 *** 
 실행환경 *Node.js v14.16.0*
 
-  npm install
-  npm start
+    npm install
+    npm start
 
 ggg
