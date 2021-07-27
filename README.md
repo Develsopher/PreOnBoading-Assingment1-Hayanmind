@@ -13,14 +13,14 @@ scroll event를 사용한 Infinite Scroll 구현
 2. 무한 스크롤 구현 (addEventListener)
 3. 유저 커멘트 카드화 (css)
 
-##실행
+## 실행
 *** 
 실행환경 *Node.js v14.16.0*
 
     npm install
     npm start
 
-##시연영상
+## 시연영상
 ***
 
 
